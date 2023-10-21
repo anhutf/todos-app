@@ -12,7 +12,11 @@ const todosReducer = (todos: todoItemProps[], action: todoAction) => {
     case todoActionKind.EDIT: {
       return todos.map((todo) => {
         if (todo.id === action.data.id) {
-          return { ...todo, text: action.data.text };
+          return {
+            ...todo,
+            text: action.data.text,
+            completed: action.data.completed,
+          };
         }
         return todo;
       });

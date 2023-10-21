@@ -1,11 +1,6 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { Dispatch, createContext, useContext, useReducer } from "react";
 import todosReducer from "./Reducer";
 import { todoAction, todoItemProps } from "./type";
-
-export const TodosContext = createContext<{
-  todos: todoItemProps[];
-  dispatch: React.Dispatch<todoAction>;
-} | null>(null);
 
 const initialTodos: todoItemProps[] = [
   {
@@ -18,7 +13,19 @@ const initialTodos: todoItemProps[] = [
     text: "Learn ReactJs",
     completed: true,
   },
+  {
+    id: 3,
+    text: "Tailwind CSS",
+    completed: false,
+  },
 ];
+
+const TodosContext = createContext<{
+  todos: todoItemProps[];
+  dispatch: Dispatch<todoAction>;
+}>({ todos: initialTodos, dispatch: () => null });
+
+export const useTodos = () => useContext(TodosContext);
 
 const TodosProvider = ({ children }: { children: React.ReactNode }) => {
   const [todos, dispatch] = useReducer(todosReducer, initialTodos);
