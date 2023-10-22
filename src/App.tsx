@@ -25,7 +25,7 @@ function App() {
             Organize your Work
           </h3>
           <SunIcon
-            className="h-7 w-7 hover:scale-110 absolute top-0 right-0"
+            className="h-7 w-7 text-rose-500 hover:scale-110 absolute top-0 right-0"
             onClick={darkMode}
           />
         </div>

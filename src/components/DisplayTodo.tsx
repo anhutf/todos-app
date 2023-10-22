@@ -60,11 +60,11 @@ const DisplayTodo = (props: { completed: boolean }) => {
                 {todo.text}
               </p>
               <PencilSquareIcon
-                className="flex-none h-6 w-6 text-rose-400 hover:scale-110"
+                className="flex-none h-6 w-6 text-rose-500 hover:scale-110"
                 onClick={() => setTodoPopUp(todo)}
               />
               <TrashIcon
-                className="flex-none h-6 w-6 text-red-500 hover:scale-110"
+                className="flex-none h-6 w-6 text-red-600 hover:scale-110"
                 onClick={() => deleteTodo(todo)}
               />
             </li>
