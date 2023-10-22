@@ -15,7 +15,7 @@ const initialTodos: todoItemProps[] = [
   },
   {
     id: 3,
-    text: "Tailwind CSS",
+    text: "Use Tailwind CSS",
     completed: false,
   },
 ];

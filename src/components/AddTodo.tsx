@@ -19,14 +19,14 @@ const AddTodo = () => {
   return (
     <div className="flex gap-1 text-xl mb-6">
       <input
-        className="flex-1 border border-rose-200 focus:outline-rose-400 rounded-md py-2 px-3 "
+        className="flex-1 border border-rose-400 focus:outline-rose-400 rounded-md py-2 px-3 placeholder:text-gray-300 dark:bg-gray-600 dark:text-white dark:placeholder-gray-500"
         type="text"
         placeholder="Add todo item"
         value={input}
         onChange={(e) => setInput(e.currentTarget.value)}
       />
       <button
-        className="flex-none bg-rose-400 hover:bg-rose-500 rounded-md py-2 px-5 text-white"
+        className="flex-none bg-rose-400 hover:bg-rose-500 rounded-md py-2 px-6 text-white"
         onClick={handleClick}
       >
         Add

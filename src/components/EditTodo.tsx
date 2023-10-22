@@ -21,10 +21,10 @@ const EditTodoss = ({ onClosePopUp, todo }: todoPopUpProps) => {
   };
 
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-screen flex bg-gray-100 bg-opacity-90 text-xl">
-      <div className="m-auto w-[30rem] bg-white p-8 rounded-md flex flex-col gap-5">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-screen flex bg-gray-100 bg-opacity-70 text-xl">
+      <div className="m-auto w-[30rem] bg-white dark:bg-gray-700 p-8 rounded-md flex flex-col gap-5">
         <input
-          className="block border border-rose-200 focus:outline-rose-400 rounded-md py-2 px-3 "
+          className="block border border-rose-200 focus:outline-rose-400 rounded-md py-2 px-3 dark:bg-gray-600 dark:text-white dark:placeholder-gray-500"
           type="text"
           placeholder="Add todo item"
           value={editTodo}

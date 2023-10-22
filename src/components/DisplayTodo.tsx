@@ -30,13 +30,13 @@ const DisplayTodo = (props: { completed: boolean }) => {
         <EditTodoss todo={todoPopUp} onClosePopUp={() => setTodoPopUp(null)} />
       )}
 
-      <ul className="">
+      <ul className="text-lg">
         {todos
           .filter((todo) => todo.completed === props.completed)
           .sort((a, b) => b.id - a.id)
           .map((todo: todoItemProps) => (
             <li
-              className="flex gap-2 p-3 rounded-md bg-gray-50 mt-1"
+              className="flex gap-2 items-center p-3 rounded-md bg-gray-50 dark:bg-gray-700 mt-1"
               key={todo.id}
             >
               {!todo.completed ? (
@@ -51,9 +51,11 @@ const DisplayTodo = (props: { completed: boolean }) => {
                 />
               )}
               <p
-                className={`flex-grow text-lg ${
-                  todo.completed ? "text-gray-500 line-through" : ""
-                }`}
+                className={`flex-grow truncate hover:text-clip ${
+                  todo.completed
+                    ? "text-gray-500 dark:text-gray-400 line-through"
+                    : ""
+                } dark:text-gray-100`}
               >
                 {todo.text}
               </p>
